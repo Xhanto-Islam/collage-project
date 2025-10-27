@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FA POLITECHNIC & IT INSTITUTE</title>
+    <link rel="stylesheet" href="style.css" />
+</head> 
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+
+  background-color: #ffffff;
+  color: #333;
+  padding-top: 40px; 
+}
+
+.container { margin: 0; }
+
+.contact{
+ padding: 20px;
+ 
+}
+.barirer { border: 1px solid #dadada; }
+
+
+header {
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  position: fixed;        
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  border-bottom: 1px solid #eee;
+}
+section-all { margin: 0; }
+.logo { display: flex; align-items: center; }
+.logo img.logo { height: 40px; display: block; }
+
+
+.menu-container { position: absolute; right: 16px; top: 12px; z-index: 2100; }
+.menubar { height: 40px; cursor: pointer; display: block; position: relative; z-index: 2101; }
+
+
+.submenu {
+
+  position: absolute;
+  right: 0;
+  background-color: rgb(216, 220, 221);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 219, 255, 0.15);
+  display: none;
+  z-index: 2000;;
+
+}
+
+.submenu.active {
+  display: block;
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.submenu a {
+  color: #333;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.submenu a:last-child {
+  border-bottom: none;
+}
+
+.submenu a:hover {
+  background-color: #f8f8f8;
+}
+
+
+.hero, section { padding: 10px;
+ }
+.hero { border: 1px solid #e2e2e2; background: #f9f9f9; }
+.herotext { padding: 20px; }
+
+.services-grid { display: block; }
+
+.service-box {
+  background: #dfe1e1;
+  padding: 12px 16px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.04);
+  margin-bottom: 12px;
+}
+
+footer { background: #b8b4b4; color: white; text-align: center; 
+font-size: small; }
+
+@media (max-width: 768px) {
+  .service-box { flex: 1 1 100%; }
+  .menu-container { right: 10px; }
+  .submenu { min-width: 140px; }
+}
+
+</style>
+
+<body>
+
+    <!-- Header section ata  plus logo style -->
+
+  <header>
+    <div class="logo">
+        <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQsAAAC9CAMAAACTb6i8AAABOFBMVEX///8lquEmImK/Tp20U0kAAFG6QpglsOf+/f8mS4OsTJgPsecAAFUmHV8kIGH6/PwRHl64N5S2UUUdGF4LAFggG1+7SzkAAE+9SJohF1y5Tj4XEVwSC1oWrecaFF0PBlk6o9W6TDpUUn1LSHeyscHMy9Zsao01MWrs7PB8e5jDw88AAEqdnLEmDFbU09ykZGnl5Oo8OW4AAESLiqSrqrwmmtDVlMDYncTgs9HQhrjs0uP15/CYbnuvWVR4hqQ5pNcuKmZbWYGzKY/DXqTdqszLeLHMfLOkL4qeaXGCgJxWmcSSc4RkkrjEeXDZsKytPTCKeY9flLyqXl0mhrsmXpQmQ3smaZ/y4e3GaKnlwdmbbHiOd4rRnpm/fXfUkIbx2NSyYl7DQiLqx8Hfq6LMko3v085kg6gNOXd935D5AAAOyUlEQVR4nO2cCVva2BrHQzSA94bDhSSsWWQLIYYYCm6tC3SZEbXuVds6daYz9X7/b3DPOdkRsHrnUcOc3/OMIyTGnn/f/RxKUQQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAiCDpt/Gn4236uZc7lXRm7unIEC2IFjOlRSEeLxQK8QL+vuC9W8AX0GX0beCrfbf7E7Olxer6+urq2vovcGnxtQ1ngfG1VXRh7V1hA16e23i//n4jvgq/fph7vQbvhv+9vpokRnS1yLxOZgrxq3X4976hUXO2fbyjCnOZy+Rb+P4asoUN6pf4XPw99S7+YT0Tv6JW41Ct2dMijrQovM9AAV6/1d7gGzNvoIHEL9+8+7yBXaEAtYBarVHvoM/MFT5Qq4WAP82UFqtr75OZuXhybW2dWod3FlYv4df4pbZGvX4XD2uBXmEtJhNdLaCPvEWxMHN5FS9k1ihoCQUKX7h88zb+mfoMoyT0kQ/QUNZsFypcwZtmUovVS231Q6Gw8Rn5RWHjjbYGwyNa6uqbN6tXmXeX2vurjc/Jz78UNl4n339A96wnP6/OpBaFTKaAc2em4L66irsX7PdhAs3EUZLN2NHD+f/saTFOnofcPONa/J8QLYgWUdTi1389Hb++bC2S+f+EWfj338fCyLPzyede7lSSDB0itZCI/V0kFlLhhzNEC6IF0YJoQbQgWjxGCwCIFimBp2mFBs0OiI4WKcEG3K+F5HOvFsWqyfO6Ig91JTJapDo1m/vt4nZ/f3/zy+7u7vLy1s9owbIaKw/r0dGCbzgvm8XJWmAzkLZzWZflewwjmloIVVVVrcFA60zR4vQWrX2xMu9Q2ra1WJyqBbOk5dlWhLSgBU5uWgxjTdRCWpwvYTuQPC1ytgjS5tbOeANBWmjDoTbs1qOkBQoZFstO1EI6yDmLl5azjhZbjlnksqW9sWIgLZxfM0NaSF9zyCmGcMnSccmWIntsB5BdqE1ue5wYMKdyeRZTjlR9AfpDmW80hbFaLJd8SzhwtKjs4Ut7Oewvm2PEgHZRq4sAEbG6E8gwn4yrL6S9bDaw/J2cEzptszi1r5VO7wYN5CMWO0s1OMyibrTM7iMncb63LeHADaXZ7J2gYecRGSHMhhaxXS9zzFeQNl+wJZRwhpW2vGt3gwbyEU1tIQZCdLTgwGQtpGPPMJAA0nYJFVo5WIzHpNuSJ0Vpa29MvHB+TYTyCNfq86mJvZl064qBSs3b5Y/Xh4eH1799uXX9BV3JDcfFi5pFdxDN6PRmvE7V+yy4q4Xdf0l7FTd67n+78X725ttpyTeKu4nErsGBn0gioQVdNtKU3mSFES2koR0DYNWJxTi6Dq8mfX1kh4rj8fVFNPMI37EsSu8II1pseYUDNIHs/M2dn7+B7441CqyF0OnysuwFo4hoIVT1V6pJ9cO1FiykSk63kfhS+jj2CR8rY40Ca5Hq4yzS5KOvhXQMPSNbOcBr3RkvBRTjTnzxfcTJIwYfIS0A9hGzxoV8RMr60UD6feIzfncFkHa2s3tBLVJ0DWWRIVWNTn0BxG6aatRGY+eJU2WVlmPS/t1Y4XKzj8su6WA3V6ochLQAeHLIGj0xMlrAnKp3WGEkp0qbbnuenb/9c8pDrhclafE4W8o6vWzALuxKbtDgI6OFPLSVGKkvvHoTllJTn7J7e5qzdcvujtFCbunR0YJ2mqeQFsECO3s49SnXuax3a0gLwEPYvGWUo6OFQ2hPwJ9gwSJLm/oU7cjv0EJ5pGM2IEmqHJ0a3JViELSLxT9KJW+ed89jfAuq7AW1qGkWRG9Gr2dntdBca+9guLlVyUFFsn/d85jfPBOye3nXRwQ84+OjNtdCWlgjMz60ObZ4sL1/Oj1cUNShp0X2OKBFJPsRhUG8GtXCVWTv+z2P+Z6rIPMJJxK7T42aFko9mYYkR/sRl5Mf9zzmxy10qP3lLJSkEtZiCWUSXo6OFnK3jkmHtPA3kU/utYsTCd+OYowfOz8Va2mURxpmV46AFpRTX+C/vSXoI59cLdDMd2t5d3P/6/Hw+D4tDv3sIYW0oFAesTSnvniSFT2eoD+j2Nn0c2oOTbchpVLp+p6nXO+NOYOQaArQR/y9IsA+yYoejzdosbVIAb/W8kfc2Un9usvHXGn5+HZEkERKCMVOAJ5kRY+nhssgQeRZlhFqAmj7xr4fqDune3ryCJlQqZI7/bodaNrbQiinCrWpD3l+VA79KVWjbqIyuwPaK95SDgID/+kB47t7Zzab++JZxkobCIDlxTInYOPj1KdZ0qMZlnFOpZIm1RuaKlc885xkJ9CnTi/CgztGnl0kzoqcqpl6r6tW+0iMcveJ1vRY8JSlbBhLS5bA9Lrl4oUfMH73zKL0ZZph/PBbM/ckAtLioigMGhbu6nBOFXtPtKbHgicLXEvn+cZA6fbE1Cdfi2Nn37g0jEmnU55xGnAmfyMx8SnFqSosZ7mOis/xeSehXio4uAk1k1XqQ0Vt8LQfPGMnJVcJmGG/TXzEx51Fdyc+2LLH2jSvD2E4AoKdrJjpjf8LANkF4DRW7hpiRxfp9pm/mtx8KbvtHFqbOOX7E83JHdPAO/EOZ0WaSQdTtvKk63oMA5RIWFgHlHmZg8Ejde47yWl22ysYpK/jm9XDo69oTL5ZCUfOWOI8BTraEiu6IzNu8MQrezgGHlHztMCq3RraUy0GJhh+6SQNK0fjphh/Hc3jzSJpmAtFzliiiBOHaVQZe5YqGk++tofiVIZCE3mzDsVon41rVXdLKLOObgzc4H1WvMcuneRCkRO6CN/o9iz0K3BBx5rPsLoHgvfXYf1NtYSa1WDoQCbxjGLP3lueP/oY7N5/fHSSKT6GIi2Ghp2fUrAvZRRWbtWTqLx48d0IAleeoE9VFSAsaS2ODpSejhTb/gGM291vhzeapt18/2v31juW45zJCWyOrLRpYYCSFJB5rPaLrzoRdZRJhGoyj5Orxtw5jyJtegVo5QRGkJX5I0iuJXkVCBQDb7qG90a42kDwswhff+6F/gRpNMKAIZ+xa4COMGIYi1t+KYVjo12b4+PgfsuSOwm17MgsOsj9vJ0X5mV/ONUBOwmTxFtbYt0oj0SM+ZGqUtq238CHGv2WJXcS+BkcLSyVE/hh1T7nGgkXQckDmbA+RD2DMFBhjg2lEvvQr718/HrX2X5f9I93Qu9ZDp6RP8PRguGasNe3HYV96QW4A2qpYaRAkgBmADUBIBQvTpwSu2TP+93DrgeoqnDqzcC2CCIFYCdmMDTVYyzc/b34OY4LLrdYvSrQsFXFHcrIUaXYF/uk8w564cYIvKW+Z5ebm7GgFHhTWaxrQ8pg+DqedSovv9CySeOkpwi00tGoOoNejBRc0kEl6xz1dc66Ojsh6CMUpflw3ExAD6E5uQZbdZbOa01cXEQiciK6zjl+WDPrS3Y31V4Ji7GzXHKaDe8YcFbCwSP3NRaWYgVJoVZ5ni/TfLfBRmGM45PGtsCbVINJol4NABqkYmGkoX0WKZBGd9C7dw/xwWCBytgBD1D2QJ0qiEZCtemKeNLXZbgaBctPBUbTVH9UDPurPxFGwTO2Exulj0+gwO5jyNKghtvgCLRlPkm8Fa5AV+ENc6mpoWlXqnlnmUiLP3IeYw8zNu3DOICpw8gJAEqoQHzu9T2Iuje7z1uwWFbLaJIxahmYRZ+7NmFbhYh34V4NcduLbCQK5XeAmlMry2KDMjml1kOZlV4Z175PJrECf4ZmDV3XG42GbtqT5Re/LzKKlbelUJNUlxFYjUJlKBg/y5goxVkb0ILcosw6VKNer/cUgC3tuRf3UPDZXCBQWkeh82baxCUSaJ//tBiJxDmSoiayPcp4BZ1EUUScnqIUOB1qHB5K8gI0cqpqIvOGflPs/6SfJFb6RShek+qxsE5pMO7Ql4uahyA0HOhgNhVVylgy6wpdHojINBZi96uRiC208er5HqWKrEpZoi0G4F/8TsA4Gnl3C7jB8A2dlwdUV4Zmkmpf3KNGInbRTtECjz5JlTepjiDWqLQtRj4i/ekoBk6schd2rLwOa2fKZFhdRY7SPl9JTJIjkVg5bxdpjq010FFnUE5DC5M7dl3PRjBY2LTwPEeGhZdSN19pabGsUi081ki1mxdQjlE94DsrF812CpTzqqkNccXGVaFdwXSCPab13Et6PAPRiXhir9GjOhyjoVwL+Cosp4vt/vnZClq+S2zl7LzfLqZ4TjTS6eQr2Q4RfNfeS4ZPefnbQ1NwJnJ02dCollge4gEgo9vbrgpfbLf7C+fnFxcX5wv/FdpQB9jF9fWBpTdrbrcLHaNrq1Ku3v8LXzJV0R1P9ljYXpoMlKJOddEYV+yhPAtSqVSxWJQNved8vJCl6nkFMJaWd+t4Wwox4lJAN1Ec8+ZpsYs+EATD36AGcwPsw03ng2M04KheR0/bTQzbQDN0WG7iIbKHEmkHsVGdTUVoHGiDke1SraU8Wier6a4WwoDqL3WdQ4DlLpqYIiMKHQqMcNj0MdyaketWBX5I1S3NSBoizSTtj2LjssG0dKsmsLj36uBkIxpegwdhIptMw+iMs6aywLWoXp6lu0mdB6yzJ49ThWZSfZ7R6ugdJo0MBnCa5yQCqz/3Iv4uUH/mBIZmC+2JMg0L1k9epoCRtblkUC0cRtDeCt50A6wrBZohzw7dPHCjpF1uUAxsu1SGV+yzbhSrMFU86LYDBh04fyPkozPp/SnMPh9cXq0OhCqlmY16r4wEstJGV9csrYZvkln/XsA3I3DQ4oEYjBwQQwG0UG5W1SEuKQE76HYHLKuqgZ10jDwrQTOM1sqHCgYaAIGTHYGEsixA+xiRgsu3ZilSBLFURgb0zwJkRo3cOO8BWENGGXWD8QgKM5xlJRDJXocR7zMOIDKd3gv/1NDfg2U0GYWbpAfgFKZpzLpJBLDqqszwoiwEFQGCLPIMp9ZnNV5ORtONVk1mGPuf2GMZRq61DP2fp0MAzbJM07Ssf7QIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoHwYP4HGVgE2ByljTkAAAAASUVORK5CYII=" alt="logo">
+
+    </div>
+    <h2 style="color: gray;">FA/KIIT</h2>
+
+    <nav>
+      <div class="menu-container">
+        <img style="height: 20px; " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlbBztCGYtNx_0rJgmapL7BvFbQjEMfsTQdg&s"class="menubar"/>
+        
+        <div class="submenu">
+          <a href="form.html">ভর্তি ফর্ম</a>
+
+          <a href="teacher.html">শিক্ষকবৃন্দ</a>
+          <a href="campus.html">গ্যালারি
+</a>
+
+          <a href="map.html">ম্যাপ</a>
+           
+          
+          
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  
+
+<!-- Hero section ata  plus hero style -->
+  <section id="home" class="hero">
+    <h3 style="text-align: center; color:rgb(218, 119, 119) "> <u>নোটিশ</u></h3> 
+<div class="herotext">
+        <p style="border: 1px solid gainsboro; padding: 20px; border-radius: 20px; background-color: white; font-size: small;"><b>ইনস্টিটিউট প্রোগ্রাম :</b><br> <br>তদ্বারা অত্র ইনস্টিটিউটের ডিপ্লোমা ইন ইঞ্জিনিয়ারিং ও ডিপ্লোমা ইন টেক্সটাইল ইঞ্জিনিয়ারিং শিক্ষাক্রমের চলমান ১ম, ২য়, ৪র্থ ও ৬ষ্ঠ পর্বের শিক্ষার্থীদের অবগতির জন্য জানানো যাচ্ছে যে, স্কিল কম্পিটিশন ২০২৫ প্রতিযোগিতায় অংশগ্রহণের নিমিত্তে সকল টেকনোলজির সকল পর্বের একক, দ্বৈত অথবা তিনজনের দলগত উদ্ভাবণী/প্রজেক্ট ধারণা নিম্নে তথ্যগুলো পূরণ করে আগামী ২৭/১০/২০২৫ খ্রিঃ এর মধ্যে স্ব স্ব বিভাগীয় প্রধানের নিকট উপস্থাপন করার জন্য নির্দেশ প্রদান করা হইল।</p>
+</div>
+
+
+
+</section>
+
+<hr style="color: gainsboro;">
+<br>
+
+
+  <section id="services">
+    <div class="container">
+      <h3>টেকনোলজি :</h3>
+      <div class="services-grid">
+        <div class="service-box">
+         <ul style="text-align: center;">সিভিল </ul>        
+        </div>
+          <div class="services-grid">
+        <div  class="service-box">
+         <ul style="text-align: center;">কম্পিউটার </ul>   
+              
+        </div>
+          <div class="services-grid">
+        <div class="service-box">
+         <ul style="text-align: center;">ইলেকট্রিক্যাল</ul>        
+        </div>
+        </div>  
+          <div class="services-grid">
+        <div class="service-box">
+         <ul style="text-align: center;">টেক্সটাইল</ul>        
+        </div>
+        </div>
+          <div class="services-grid">
+        <div class="service-box">
+         <ul style="text-align: center;">গার্মেন্টস ডিজাইন</ul>        
+        </div>
+      </div>
+    </div>   
+  </section>
+  <br>
+
+  <hr style="color: gainsboro;">
+  <br>
+  
+
+  <!-- About section ata-->
+<section style="margin-left: 10px; margin-right: 10px;" id="about">
+    <ul style="border: 1px solid gainsboro; padding: 40px; border-radius: 20px; background-color: white; font-size: small;">
+      <h3 style="text-align: center; color:rgb(0, 0, 0) "> <u>আমাদের
+ সম্পর্কে</u></h3><br>
+      <li>নিরিবিলি ও মনোরম পরিবেশে অবস্থিত।</li>
+      <li>অভিজ্ঞ শিক্ষকমণ্ডলী দ্বারা পাঠদান।</li>
+      <li>অভিজ্ঞ শিক্ষকমণ্ডলী দ্বারা পাঠদান।</li>
+      <li>যুগোপযোগী ও হাতে কলমে শিক্ষা প্রদানে আমরাই শীর্ষে।</li>
+      <li>দূর্বল ছাত্র-ছাত্রীদের জন্য বিশেষ তত্ত্বাবধান।</li>
+      <li>কম্পিউটার প্রশিক্ষণ।</li>
+    </ul>
+  </section>
+
+<br>
+<hr style="color: gainsboro;">
+  
+
+    <div class="contact">
+      <h3>যোগযোগ :</h3>
+      <p><strong>ইমেইল :</strong> fapolitechnic@email.com</p>
+      <p><strong>ফোন :</strong> ০১৭০৫৯৪১৪১৩</p>
+      
+
+    </div>
+
+ <!-- Footer section ata -->
+  <footer>
+    <div style="width: 100%; height: 100%; display: block;">
+      <p>&copy;2025 Design by Shanto Islam</p>
+    </div>
+  </footer> 
+
+
+
+
+  <!--chatgpt theke neya java script ata-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menubar = document.querySelector('.menubar');
+      const submenu = document.querySelector('.submenu');
+      
+      if (menubar && submenu) {
+        // Toggle submenu on menu click
+        menubar.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          submenu.classList.toggle('active');
+        });
+        
+        // Close submenu when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!menubar.contains(e.target) && !submenu.contains(e.target)) {
+            submenu.classList.remove('active');
+          }
+        });
+        
+        
+        submenu.addEventListener('click', function(e) {
+          e.stopPropagation();
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
