@@ -25,7 +25,7 @@ body {
 
 .contact{
  padding: 20px;
- 
+
 }
 .barirer { border: 1px solid #dadada; }
 
@@ -125,6 +125,15 @@ font-size: small; }
   .submenu { min-width: 140px; }
 }
 
+.a1{background:#FFFFFF;border-radius:12px;box-shadow:0 3px 8px rgba(0,0,0,.1);margin:15px auto;padding:10px 20px;max-width:700px;cursor:pointer;transition:all .3s ease}
+.a1:hover{background:#f9fafc;transform:scale(1.02)}
+.b2{text-align:center;font-size:22px;font-weight:700;color:#000000;margin:10px 0}
+.c3{display:none;margin-top:10px}
+.c3.x9{display:block}
+.c3 h3{text-align:center;color:#334155;font-size:18px;margin:10px 0 5px 0}
+.d4{list-style:none;padding-left:15px}
+.e5{background:#B9C0C7;margin:4px 0;padding:6px 10px;border-radius:6px;border-left:4px solid #EF0000}
+
 </style>
 
 <body>
@@ -150,15 +159,21 @@ font-size: small; }
 
           <a href="map.html">ম্যাপ</a>
           <a href="about.html">আমাদের সম্পর্কে</a>
-           
-          
-          
+
+
+
         </div>
       </div>
     </nav>
 
   </header>
   
+  
+<marquee behavior="scroll" direction="left" scrollamount="5" style="font-size:20px; color:red; padding:10px;">
+  প্রয়োজনে নোটিশ পেতে প্রতিনিয়ত আমাদের নোটিশ বোর্ড অনুসরণ করুন
+</marquee>
+  
+
 
 <!-- Hero section ata  plus hero style -->
   <section id="home" class="hero">
@@ -169,52 +184,78 @@ font-size: small; }
 
 
 
-</section>
-
-<hr style="color: gainsboro;">
-<br>
 
 
-  <section id="services">
-    <div class="container">
-      <h3>টেকনোলজি :</h3>
-      <div class="services-grid">
-        <div class="service-box">
-         <ul style="text-align: center;">সিভিল </ul>        
-        </div>
-          <div class="services-grid">
-        <div  class="service-box">
-         <ul style="text-align: center;">কম্পিউটার </ul>   
-              
-        </div>
-          <div class="services-grid">
-        <div class="service-box">
-         <ul style="text-align: center;">ইলেকট্রিক্যাল</ul>        
-        </div>
-        </div>  
-          <div class="services-grid">
-        <div class="service-box">
-         <ul style="text-align: center;">টেক্সটাইল</ul>        
-        </div>
-        </div>
-          <div class="services-grid">
-        <div class="service-box">
-         <ul style="text-align: center;">গার্মেন্টস ডিজাইন</ul>        
-        </div>
-      </div>
-    </div>   
+</section ><br /><br />
+
+<h2 style="color:#5898D7; text-align: center;"> বইয়ের তালিকা :</h2><br />
+<div class="a1" onclick="togg('dep1')">
+  <div class="b2">সিভিল</div>
+  <div id="dep1" class="c3">
+    <h3>১ম সেমিস্টার</h3><ul class="d4"><li class="e5">বাংলা ১</li><li class="e5">ইংরেজি ১</li></ul>
+    <h3>২য় সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৩য় সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৪র্থ সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৫ম সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৬ষ্ঠ সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৭ম সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+  </div>
+</div><div class="a1" onclick="togg('dep2')">
+  <div class="b2">কম্পিউটার</div>
+  <div id="dep2" class="c3">
+    <h3>১ম সেমিস্টার</h3><ul class="d4"><li class="e5">বাংলা ১</li><li class="e5">ইংরেজি ১</li></ul>
+    <h3>২য় সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৩য় সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৪র্থ সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৫ম সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৬ষ্ঠ সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৭ম সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+  </div>
+</div><div class="a1" onclick="togg('dep3')">
+  <div class="b2">ইলেকট্রিক্যাল</div>
+  <div id="dep3" class="c3">
+    <h3>১ম সেমিস্টার</h3><ul class="d4"><li class="e5">বাংলা ১</li><li class="e5">ইংরেজি ১</li></ul>
+    <h3>২য় সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৩য় সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৪র্থ সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৫ম সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৬ষ্ঠ সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৭ম সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+  </div>
+</div><div class="a1" onclick="togg('dep4')">
+  <div class="b2">টেক্সটাইল</div>
+  <div id="dep4" class="c3">
+    <h3>১ম সেমিস্টার</h3><ul class="d4"><li class="e5">বাংলা ১</li><li class="e5">ইংরেজি ১</li></ul>
+    <h3>২য় সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৩য় সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৪র্থ সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৫ম সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৬ষ্ঠ সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৭ম সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+  </div>
+</div><div class="a1" onclick="togg('dep5')">
+  <div class="b2">গার্মেন্টস ডিজাইন</div>
+  <div id="dep5" class="c3">
+    <h3>১ম সেমিস্টার</h3><ul class="d4"><li class="e5">বাংলা ১</li><li class="e5">ইংরেজি ১</li></ul>
+    <h3>২য় সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৩য় সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৪র্থ সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৫ম সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৬ষ্ঠ সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+    <h3>৭ম সেমিস্টার</h3><ul class="d4"><li class="e5">উদাহরণ ১</li><li class="e5">উদাহরণ ২</li></ul>
+  </div>
+</div>
+
   </section>
   <br>
 
-  <hr style="color: gainsboro;">
-  <br>
   
+
 
   <!-- About section ata-->
 <section style="margin-left: 10px; margin-right: 10px;" id="about">
     <ul style="border: 1px solid gainsboro; padding: 40px; border-radius: 20px; background-color: white; font-size: small;">
-      <h3 style="text-align: center; color:rgb(0, 0, 0) "> <u>আমাদের
- সম্পর্কে</u></h3><br>
+      <h3 style="text-align: center; color:rgb(0, 0, 0) "> <u>বিস্তারিত</u></h3><br>
       <li>নিরিবিলি ও মনোরম পরিবেশে অবস্থিত।</li>
       <li>অভিজ্ঞ শিক্ষকমণ্ডলী দ্বারা পাঠদান।</li>
       <li>অভিজ্ঞ শিক্ষকমণ্ডলী দ্বারা পাঠদান।</li>
@@ -226,13 +267,13 @@ font-size: small; }
 
 <br>
 <hr style="color: gainsboro;">
-  
+
 
     <div class="contact">
       <h3>যোগযোগ :</h3>
       <p><strong>ইমেইল :</strong> fapolitechnic@email.com</p>
       <p><strong>ফোন :</strong> ০১৭০৫৯৪১৪১৩</p>
-      
+
 
     </div>
 
@@ -251,7 +292,7 @@ font-size: small; }
     Shanto Islam
   </a>
 </footer>
- 
+
 
 
 
@@ -261,7 +302,7 @@ font-size: small; }
     document.addEventListener('DOMContentLoaded', function() {
       const menubar = document.querySelector('.menubar');
       const submenu = document.querySelector('.submenu');
-      
+
       if (menubar && submenu) {
         // Toggle submenu on menu click
         menubar.addEventListener('click', function(e) {
@@ -269,20 +310,28 @@ font-size: small; }
           e.stopPropagation();
           submenu.classList.toggle('active');
         });
-        
+
         // Close submenu when clicking outside
         document.addEventListener('click', function(e) {
           if (!menubar.contains(e.target) && !submenu.contains(e.target)) {
             submenu.classList.remove('active');
           }
         });
-        
-        
+
+
         submenu.addEventListener('click', function(e) {
           e.stopPropagation();
         });
       }
     });
+    
+    
+    function togg(id){
+  document.querySelectorAll('.c3').forEach(d=>{
+    d.id===id?d.classList.toggle('x9'):d.classList.remove('x9');
+  });
+}
+
   </script>
 </body>
 
