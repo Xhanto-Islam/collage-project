@@ -232,22 +232,10 @@
     </div>
   </div>
   <script>
-  const form = document.getElementById("my-form");
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault(); // ফর্ম সাবমিট হলে নতুন পেজে না যায়
-    const data = new FormData(form);
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-    if (response.ok) {
-      alert("");
-      form.reset();
-    } else {
-      alert(" ");
-    }
-  });
-  </script>
+document.querySelector("form").addEventListener("submit", function(event) {
+  event.preventDefault(); 
+  alert("internet connection failed");
+});
+</script>
 </body>
 </html>
